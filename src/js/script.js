@@ -13,8 +13,10 @@
         let random = Math.floor(Math.random() * 3);
         let randomPerson = new Person(faker.name.findName(), occupation[random], clothing[random]);
         let description = randomPerson.name + " is a " + occupation[random] + ", wearing " + clothing[random];
+
         left.textContent = randomPerson.name;
         middle.textContent = description;
+
         console.log(randomPerson);
     }
 
