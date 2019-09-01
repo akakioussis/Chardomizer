@@ -11,16 +11,9 @@
 }
 
 .header-content {
-    // float: left;
-    // text-align: center;
     display: flex;
-    justify-content: center;
-    // padding: 10px;
-    // margin: 0;
     align-items: center;
-    width: 100%;
     height: 100%;
-
 }
 
 .left {
@@ -28,12 +21,20 @@
 
 }
 
-.middle {
-    width: 50%;
+.middle {}
+
+.right {
+    background-image: url("../assets/img/weebler.jpg");
+    background-repeat: no-repeat;
+    background-image: center;
+    width: 100%;
+    height: 50%;
 }
 
 .items {
-    padding: 30px;
+    padding: 55px;
+    text-align: center;
     font-size: 2em;
-    // word-break: break-all;
 }
+
+.img {}

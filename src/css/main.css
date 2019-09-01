@@ -8,54 +8,23 @@
 
 .header-content {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
   height: 100%; }
 
 .left {
   text-transform: uppercase; }
 
-.middle {
-  width: 50%; }
+.right {
+  background-image: url("../assets/img/weebler.jpg");
+  background-repeat: no-repeat;
+  background-image: center;
+  width: 100%;
+  height: 50%; }
 
 .items {
-  padding: 30px;
+  padding: 55px;
+  text-align: center;
   font-size: 2em; }
-
-@media only screen and (max-width: 800px) {
-  .navbar-left {
-    display: none; }
-  .navbar-right {
-    padding: 30px;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center; }
-  .navbar-item {
-    margin: 0;
-    display: block;
-    padding: 10px;
-    margin: 10px;
-    font-size: 1em; }
-  .slogan {
-    display: none; }
-  .header {
-    display: none; }
-  .inbetweener {
-    display: none; }
-  .section {
-    border-top-left-radius: 0px; }
-  .section-content {
-    margin-top: 0.1em; }
-  .navbar-top {
-    display: none; }
-  .images {
-    width: 50%; }
-  .image-row1 {
-    height: 50%;
-    width: 100%; }
-  .navbar-item {
-    margin: 0; } }
 
 * {
   margin: 0;
@@ -76,4 +45,5 @@ img {
 .container {
   max-width: 1200px;
   width: 95%;
-  margin: auto; }
+  margin: auto;
+  height: 100%; }
