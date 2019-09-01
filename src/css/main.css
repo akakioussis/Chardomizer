@@ -1,144 +1,27 @@
-.navbar {
-  overflow: hidden;
-  display: inline;
-  text-align: center; }
-
-.navbar-background {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.829), rgba(0, 0, 0, 0.801)), url("../assets/img/burgers-1839090_1920.jpg");
-  transition: all 1s;
-  transition-timing-function: ease; }
-
-.navbar-logo {
-  cursor: pointer; }
-
-.navbar img {
-  width: 100%;
-  height: 100%;
-  max-width: 12em;
-  max-height: 12em;
-  margin: 0 auto;
-  background-color: #00000000;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-
-.navbar-top {
-  padding: 0.1em;
-  margin-bottom: -5em;
-  margin-top: -1.2em; }
-
-.navbar-bottom {
-  margin-top: 1.7em;
-  padding: 0.2em;
-  transition: all 1s;
-  transition-timing-function: ease;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: linear-gradient(rgba(7, 7, 7, 0.829), rgba(0, 0, 0, 0.801)), url("../assets/img/burgers-1839090_1920.jpg"); }
-
-.navbar-item {
-  padding: 19px;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  font-weight: 500;
-  font-family: 'Ultra', serif;
-  color: white;
-  transition: all 1s;
-  transition-timing-function: ease;
-  text-shadow: 3px 3px #180e05; }
-
 .header {
-  height: 75vh;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.637)), url("../assets/img/burgers-1839090_1920.jpg");
-  transition: all 1s;
-  transition-timing-function: ease; }
+  background-image: linear-gradient(rgba(255, 255, 255, 0.151), rgba(0, 0, 0, 0.836)), url("../assets/img/j6AaDAF.jpg"); }
 
-.slogan {
-  text-transform: uppercase;
-  font-size: 3em;
-  font-weight: 500;
-  font-family: 'Ultra', serif;
-  color: white;
-  text-shadow: 4px 3px #0c0702dc;
-  display: inline-block;
-  text-align: center;
-  padding-left: 2em;
-  margin-top: 11em;
-  background-color: black; }
-
-.inbetweener {
-  text-transform: uppercase;
-  font-size: 2em;
-  font-weight: 500;
-  font-family: 'Ultra', serif;
-  color: rgba(156, 93, 35, 0.979);
-  text-shadow: 4px 3px #ff000017;
+.header-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5em;
-  transition: all 1s;
-  text-align: center;
-  transition-timing-function: ease; }
-
-.section {
-  transition: all 1s;
-  transition-timing-function: ease;
-  border-top-left-radius: 300px;
-  height: 110vh;
-  background-color: black;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: linear-gradient(black, rgba(0, 0, 0, 0.315)), url("../assets/img/burninggrill.jpg"); }
+  height: 100%; }
 
-.section-content {
-  margin-top: 0.5em;
-  padding-top: 1em;
-  width: 100%;
-  color: #fafafa;
-  height: 100vh; }
+.left {
+  text-transform: uppercase; }
 
-.image-row1 {
-  display: flex;
-  justify-content: space-around;
-  background-color: black;
-  height: 50%; }
+.middle {
+  width: 50%; }
 
-.images {
-  width: 100%; }
-
-.image1 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.048)), url("../assets/img/ribsonfire.jpg"); }
-
-.image2 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.048)), url("../assets/img/ingredients.jpg"); }
-
-.image3 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.048)), url("../assets/img/steakonfire.jpg"); }
+.items {
+  padding: 30px;
+  font-size: 2em; }
 
 @media only screen and (max-width: 800px) {
   .navbar-left {
