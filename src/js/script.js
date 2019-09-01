@@ -1,8 +1,13 @@
-    let randomName = faker.name.findName(); // Caitlyn Kerluke
-    let randomCard = faker.helpers.createCard(); // random contact card containing many properties]
     let boy = document.querySelector(".boy");
     let left = document.querySelector(".left");
     let middle = document.querySelector(".middle");
+
+
+    function Person(name, occupation, clothing) {
+        this.name = name;
+        this.occupation = occupation;
+        this.clothing = clothing;
+    }
 
     function randomizer() {
         let randomName = faker.name.findName(); // Caitlyn Kerluke
@@ -13,9 +18,13 @@
         left.textContent = randomName;
         middle.textContent = description;
         console.log(randomName);
+        console.log(randomPerson);
+        let randomPerson = new Person(faker.name.findName(), "Tit Fucker", "Trap socks");
     }
 
-    // boy.onclick = randomizer();
+
+    randomizer();
+
     boy.onclick = function () {
         randomizer();
     }
