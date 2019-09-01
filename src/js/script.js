@@ -9,16 +9,18 @@
         this.clothing = clothing;
     }
 
+    Person();
+
     function randomizer() {
-        let randomName = faker.name.findName(); // Caitlyn Kerluke
+        let randomPerson = new Person(faker.name.findName(), "Tit Fucker", "Trap socks");
         let occupation = ["ranger", "warrior", "mage"];
         let clothing = ["leather clothing", "iron armor", "tattered rags"];
         let random = Math.floor(Math.random() * 3);
-        let description = [randomName + " is a " + occupation[random] + ", wearing " + clothing[random]];
-        left.textContent = randomName;
+        let description = [randomPerson.name + " is a " + occupation[random] + ", wearing " + clothing[random]];
+        left.textContent = randomPerson.name;
         middle.textContent = description;
-        console.log(randomName);
-        let randomPerson = new Person(faker.name.findName(), "Tit Fucker", "Trap socks");
+        console.log(randomPerson.name)
+        console.log(randomPerson);
     }
 
 
