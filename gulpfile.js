@@ -23,6 +23,9 @@ gulp.task('build', async function () {
 
     gulp.src('./src/*.html')
         .pipe(gulp.dest('./dist'));
+
+    gulp.src('./src/js/*.js')
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 function watch() {
