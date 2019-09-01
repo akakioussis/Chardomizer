@@ -9,8 +9,6 @@
         this.clothing = clothing;
     }
 
-    Person();
-
     function randomizer() {
         let random = Math.floor(Math.random() * 3);
         let randomPerson = new Person(faker.name.findName(), occupation[random], clothing[random]);
