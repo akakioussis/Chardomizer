@@ -18,7 +18,6 @@
         left.textContent = randomName;
         middle.textContent = description;
         console.log(randomName);
-        console.log(randomPerson);
         let randomPerson = new Person(faker.name.findName(), "Tit Fucker", "Trap socks");
     }
 
