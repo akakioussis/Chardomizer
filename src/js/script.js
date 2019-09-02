@@ -26,7 +26,7 @@
         console.log(randomClothing);
     }
 
-    randomizer();
+    // randomizer();
 
     document.querySelector(".boy").onclick = function () {
         randomizer();
