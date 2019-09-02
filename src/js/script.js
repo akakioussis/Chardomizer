@@ -1,23 +1,29 @@
     let left = document.querySelector(".left");
     let middle = document.querySelector(".middle");
     let occupation = ["ranger", "warrior", "mage"];
-    let clothing = ["leather clothing", "iron armor", "tattered rags"];
+    let clothing = [new Clothing("Leather Armor", "simple"), new Clothing("Iron Armor", "masterwork"), new Clothing("Hide Rags", "shitty")];
 
-    function Person(name, occupation, clothing) {
+    function Person(name, occupation) {
         this.name = name;
         this.occupation = occupation;
-        this.clothing = clothing;
+    }
+
+    function Clothing(material, quality) {
+        this.material = material;
+        this.quality = quality;
     }
 
     function randomizer() {
         let random = Math.floor(Math.random() * 3);
-        let randomPerson = new Person(faker.name.findName(), occupation[random], clothing[random]);
-        let description = randomPerson.name + " is a " + occupation[random] + ", wearing " + clothing[random];
+        let randomPerson = new Person(faker.name.findName(), occupation[random]);
+        let randomClothing = new Clothing(clothing[random].quality, clothing[random].material);
+        let description = randomPerson.name + " is a " + occupation[random] + ", wearing a " + clothing[random].quality + " " + clothing[random].material;
 
         left.textContent = randomPerson.name;
         middle.textContent = description;
 
         console.log(randomPerson);
+        console.log(randomClothing);
     }
 
     randomizer();
