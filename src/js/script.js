@@ -1,33 +1,59 @@
-    let left = document.querySelector(".left");
-    let middle = document.querySelector(".middle");
-    let occupation = ["ranger", "warrior", "mage"];
-    let clothing = [new Clothing("Leather Armor", "simple"), new Clothing("Iron Armor", "masterwork"), new Clothing("Hide Rags", "shitty")];
+function Occupation(name) {
+    this.name = name;
+}
 
-    function Person(name, occupation) {
-        this.name = name;
+function Clothing(name) {
+    this.name = name;
+}
+
+function Quality(quality, percentage) {
+    this.quality = quality;
+    this.percentage = percentage;
+}
+
+function Person() {
+    this.name = faker.name.findName();
+    this.occupation = new Occupation("Unemployed");
+
+    this.setOccupation = function (occupation) {
         this.occupation = occupation;
-    }
+    };
 
-    function Clothing(material, quality) {
-        this.material = material;
+    this.setClothes = function (clothes) {
+        this.clothes = clothes;
+    };
+
+    this.setQuality = function (quality, percentage) {
         this.quality = quality;
+        this.percentage = percentage;
     }
+}
 
-    function randomizer() {
-        let random = Math.floor(Math.random() * 3);
-        let randomPerson = new Person(faker.name.findName(), occupation[random]);
-        let randomClothing = new Clothing(clothing[random].quality, clothing[random].material);
-        let description = randomPerson.name + " is a " + occupation[random] + ", wearing a " + clothing[random].quality + " " + clothing[random].material;
+/* Other stuff */
+const occupations = [new Occupation("Warrior"), new Occupation("Mage"), new Occupation("Ranger")];
+const clothes = [new Clothing("Leather Armor"), new Clothing("Copper Chestplate")];
+const quality = [new Quality("Common", 10), new Quality("Masterwork", 30), new Quality("Legendary", 100)];
 
-        left.textContent = randomPerson.name;
-        middle.textContent = description;
+function getRandom(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
 
-        console.log(randomPerson);
-        console.log(randomClothing);
-    }
+function generatePerson() {
+    let person = new Person();
 
-    randomizer();
+    person.setOccupation(getRandom(occupations));
+    person.setClothes(getRandom(clothes));
+    person.setQuality(getRandom(quality));
 
-    document.querySelector(".boy").onclick = function () {
-        randomizer();
-    }
+    return person;
+}
+
+function displayPerson(person) {
+    document.querySelector(".charname").textContent = person.name;
+    document.querySelector(".chardesc").textContent = person.name + " is a " + person.occupation.name + ". " + "They're wearing a " + person.quality.quality + " " + person.clothes.name + ". It offers " + person.quality.percentage + " points of defense.";
+}
+
+document.querySelector(".boy").onclick = function () {
+    let generatedPerson = generatePerson();
+    displayPerson(generatedPerson);
+};
