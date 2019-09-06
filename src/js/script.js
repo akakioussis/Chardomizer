@@ -50,7 +50,7 @@ function generatePerson() {
 
 function displayPerson(person) {
     document.querySelector(".charname").textContent = person.name;
-    document.querySelector(".chardesc").textContent = person.name + " is a " + person.occupation.name + ". " + "He's wearing a " + person.quality.quality + " " + person.clothes.name + ". It offers " + person.quality.percentage + " points of defense.";
+    document.querySelector(".chardesc").textContent = person.name + " is a " + person.occupation.name + ". " + "They're wearing a " + person.quality.quality + " " + person.clothes.name + ". It offers " + person.quality.percentage + " points of defense.";
 }
 
 document.querySelector(".boy").onclick = function () {
